@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#91C0D7</color>
+    <color name="colorPrimaryDark">#81B0D7</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="light_green">#6FBD74</color>
+    <color name="red">#D32E3A</color>
+    <color name="dark_red">#C01C28</color>
+
+    <color name="light_blue">#C8DFE9</color>
+    <color name="light_purple">#B577C7</color>
+
+
+
+    <color name="list_item_odd">#CCDAD1</color>
+    <color name="list_item_even">#9CAEA9</color>
+
+    <!-- Toggl Activity colors -->
+    <color name="toggl_base_bg">#EFF5F5</color>
+    <color name="toggl_time_entries_header_bg">#FCE4DA</color>
+    <color name="toggl_list_panel_bg">#FDF6E9</color>
+    <color name="base_text_color">#37392E</color>
+
+    <!-- Toggle status colors -->
+    <color name="toggl_status_unsaved">@color/red</color>
+    <color name="toggl_status_saved">@color/light_green</color>
+    <color name="button_gray">#ADA8B6</color>
+    <color name="button_gray_dark">#9C97A5</color>
+
+    <!-- Toggl entry status button colors -->
+    <color name="toggl_action_unselected">@color/light_blue</color>
+    <color name="toggl_action_selected">@color/light_purple</color>
+
+
+    <!-- Divider Gradient Colors -->
+    <color name="gray_divider_start_end">#FAFAFA</color>
+    <color name="gray_divider_center">#D5D4D5</color>
+
+</resources>

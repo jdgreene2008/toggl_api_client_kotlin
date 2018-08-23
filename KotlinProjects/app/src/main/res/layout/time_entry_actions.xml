@@ -1,0 +1,55 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="150dp"
+    android:paddingBottom="10dp"
+    android:focusableInTouchMode="false"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingStart="25dp">
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/btn_save"
+            android:focusableInTouchMode="false"
+            android:textColor="@color/toggl_status_saved"
+            android:textSize="@dimen/text_large" />
+
+        <include layout="@layout/divider_gray" />
+
+        <TextView
+            android:id="@+id/btn_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:focusableInTouchMode="false"
+            android:text="@string/btn_edit"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_large" />
+
+        <include layout="@layout/divider_gray" />
+
+        <TextView
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/btn_delete"
+            android:focusableInTouchMode="false"
+            android:textColor="@color/toggl_status_unsaved"
+            android:textSize="@dimen/text_large" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

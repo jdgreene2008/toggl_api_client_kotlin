@@ -1,0 +1,5 @@
+ext.STRING = 'String'
+ext.TEST_USERNAME = '""'
+ext.TEST_PASSWORD = '""'
+ext.FIELD_USERNAME = 'USERNAME'
+ext.FIELD_PASSWORD = 'PASSWORD'

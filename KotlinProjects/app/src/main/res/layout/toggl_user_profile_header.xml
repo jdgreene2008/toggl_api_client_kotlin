@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/user_profile_dialog_width"
+    android:layout_height="@dimen/user_profile_dialog_height">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="24dp"
+        android:paddingStart="15dp"
+        android:paddingTop="24dp">
+
+        <TextView
+            android:id="@+id/label_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Jarvis Greene" />
+
+        <TextView
+            android:id="@+id/label_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:textColor="@color/light_green"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_username" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="@style/RedButtonTransparentMedium"
+            android:layout_marginStart="2dp"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintTop_toBottomOf="@id/label_email"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"
+            android:text="@string/label_logout"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Log Out" />
+
+        <include
+            android:id="@+id/divider"
+            layout="@layout/divider_gray"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_logout" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <View
+                android:id="@+id/status_bar"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/date"
+                android:layout_alignTop="@+id/blog_post"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                tools:background="@color/red" />
+
+            <TextView
+                android:id="@id/blog_post"
+                style="@style/ListItem.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textSize="@dimen/text_medium"
+                tools:text="NOTES ON SERVER ISSUES" />
+
+            <TextView
+                android:id="@+id/blog_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/blog_post"
+                android:layout_below="@id/blog_post"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/red"
+                tools:text="http://www.yahoo.com"
+                tools:background="@color/colorPrimary" />
+
+
+            <TextView
+                android:id="@id/date"
+                style="@style/ListItem.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/blog_post"
+                android:layout_below="@id/blog_url"
+                android:textColor="@color/button_gray"
+                android:textSize="@dimen/text_medium"
+                tools:text="Jun 12,2018 @ 10:15am" />
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

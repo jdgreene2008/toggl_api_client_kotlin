@@ -1,0 +1,119 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionMenuTextAppearance">@style/ActionMenuItemText</item>
+        <item name="android:textColorPrimary">@color/base_text_color</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ActionBarTitleTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/base_text_color</item>
+    </style>
+
+    <style name="StyledText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ActionMenuItemText" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textColor">@color/base_text_color</item>
+    </style>
+
+    <style name="HeaderText" parent="StyledText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_x_large</item>
+    </style>
+
+    <style name="SmallHeaderText" parent="StyledText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="SmallSubHeaderText" parent="StyledText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="XLargeHeaderText" parent="StyledText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_xxx_large</item>
+    </style>
+
+    <style name="XXLargeHeaderText" parent="StyledText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_xxxx_large</item>
+    </style>
+
+    <style name="LargeHeaderText" parent="StyledText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_xx_large</item>
+    </style>
+
+    <style name="SubHeaderText" parent="StyledText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="StyledButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="RedButtonSolidMedium" parent="StyledButton">
+        <item name="android:background">@drawable/bg_button_red_solid</item>
+        <item name="android:layout_width">@dimen/medium_button_width</item>
+        <item name="android:layout_height">@dimen/medium_button_height</item>
+    </style>
+
+    <style name="RedButtonTransparentMedium" parent="StyledButton">
+        <item name="android:background">@drawable/bg_button_red_transparent</item>
+        <item name="android:layout_width">@dimen/medium_button_width</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_height">@dimen/medium_button_height</item>
+    </style>
+
+    <style name="GrayButtonSmall" parent="StyledButton">
+        <item name="android:background">@drawable/bg_button_gray</item>
+        <item name="android:layout_width">@dimen/button_small_width</item>
+        <item name="android:layout_height">@dimen/button_small_height</item>
+    </style>
+
+    <style name="GrayButtonRound" parent="StyledButton">
+        <item name="android:background">@drawable/bg_button_gray_round_transparent</item>
+        <item name="android:layout_width">@dimen/small_button_width</item>
+        <item name="android:layout_height">@dimen/small_button_height</item>
+    </style>
+
+    <style name="ListItem" parent="StyledText">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ListItem.Title" parent="ListItem">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="ListItem.Subtitle" parent="ListItem">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

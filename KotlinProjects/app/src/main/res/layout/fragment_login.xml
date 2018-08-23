@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_base"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="25dp"
+    tools:context=".ui.fragment.LoginFragment">
+    <ImageView
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/toggl_logo_splash"
+        android:layout_height="160dp" />
+
+    <TextView
+        style="@style/SubHeaderText"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_username"
+        android:textStyle="bold"
+        android:textColor="@color/base_text_color" />
+
+    <com.jarvis.kotlin.ui.widget.ObservantEditText
+        android:id="@+id/fld_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
+        android:nextFocusDown="@+id/fld_password"
+        android:nextFocusForward="@+id/fld_password" />
+
+    <TextView
+        style="@style/SubHeaderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/label_password"
+        android:textStyle="bold"
+        android:textColor="@color/base_text_color" />
+
+    <com.jarvis.kotlin.ui.widget.ObservantEditText
+        android:id="@id/fld_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:maxLines="1" />
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/RedButtonSolidMedium"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"
+        android:text="@string/btn_login" />
+</LinearLayout>

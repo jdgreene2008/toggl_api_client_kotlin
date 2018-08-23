@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toggl_base_bg"
+    android:paddingEnd="10dp"
+    android:paddingTop="75dp"
+    android:paddingStart="10dp"
+    android:paddingBottom="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/user_fullname"
+        style="@style/HeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:text="Jarvis Greene" />
+
+    <TextView
+        android:id="@+id/user_email"
+        style="@style/SubHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_fullname"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/todays_date"
+        style="@style/StyledText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="125dp"
+        android:textSize="@dimen/text_medium"
+        tools:text="Jun 5, 2020" />
+
+    <TextView
+        android:id="@+id/blog_post"
+        style="@style/StyledText"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/todays_date"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="right"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_medium"
+        tools:text="What's new! Check out the blog post" />
+</RelativeLayout>

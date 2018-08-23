@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toggl_base_bg"
+    android:padding="15dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/XLargeHeaderText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/red"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="@dimen/text_xx_large"
+                android:text="@string/label_edit_time_entry"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white" />
+
+            <ScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="20dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:hint="@string/label_description"
+                            android:inputType="textMultiLine"
+                            android:maxLines="2" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/SmallHeaderText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/label_project"
+                        android:textAllCaps="true"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+                    <Spinner
+                        android:id="@+id/projects"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                    <include
+                        android:id="@+id/divider_projects"
+                        layout="@layout/divider_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@id/projects"
+                        app:layout_constraintTop_toBottomOf="@id/projects" />
+
+                    <TextView
+                        android:id="@+id/lbl_tasks"
+                        style="@style/SmallHeaderText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/label_tasks"
+                        android:textAllCaps="true"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                        app:layout_constraintTop_toBottomOf="@id/divider_projects" />
+
+                    <Spinner
+                        android:id="@+id/tasks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView3"
+                        app:layout_constraintTop_toBottomOf="@id/lbl_tasks" />
+
+                    <include
+                        android:id="@+id/divider_tasks"
+                        layout="@layout/divider_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@id/projects"
+                        app:layout_constraintTop_toBottomOf="@id/tasks" />
+
+                    <TextView
+                        android:id="@+id/label_duration"
+                        style="@style/SmallHeaderText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/label_date_duration"
+                        android:textAllCaps="true"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                        app:layout_constraintTop_toBottomOf="@id/divider_tasks" />
+
+                    <View
+                        android:id="@+id/btn_edit_date"
+                        android:layout_marginStart="5dp"
+                        android:layout_height="24dp"
+                        android:layout_width="24dp"
+                        android:background="@drawable/date_range"
+                        app:layout_constraintBottom_toBottomOf="@id/label_duration"
+                        app:layout_constraintStart_toEndOf="@id/label_duration"
+                        android:text="@string/btn_change"
+                        android:backgroundTint="@color/red"
+                        android:textColor="@android:color/white"
+                        tools:text="Change" />
+
+                    <LinearLayout
+                        android:id="@+id/time_options"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:weightSum="5.0"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label_duration">
+
+                        <TextView
+                            android:id="@+id/start_time"
+                            style="@style/SmallHeaderText"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/button_gray"
+                            tools:text="Fri, Jun 15" />
+
+
+                        <Spinner
+                            android:id="@+id/hrs"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/entries_hours" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            style="@style/SmallSubHeaderText"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.3"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/common_colon" />
+
+                        <Spinner
+                            android:id="@+id/minutes"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:entries="@array/entries_minutes_seconds" />
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/divider_date"
+                        layout="@layout/divider_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@id/projects"
+                        app:layout_constraintTop_toBottomOf="@id/time_options" />
+
+                    <TextView
+                        android:id="@+id/label_apply_multiple_days"
+                        style="@style/SmallHeaderText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/label_apply_multiple_days"
+                        android:textAllCaps="true"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+                        app:layout_constraintTop_toBottomOf="@id/divider_date" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_dates_multi_select"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintTop_toBottomOf="@id/label_apply_multiple_days" />
+
+                    <include
+                        android:id="@+id/divider_date_multi_select"
+                        layout="@layout/divider_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toStartOf="@id/projects"
+                        app:layout_constraintTop_toBottomOf="@id/list_dates_multi_select" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider_date_multi_select">
+
+                        <Button
+                            android:id="@+id/btn_cancel"
+                            style="@style/RedButtonTransparentMedium"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/btn_cancel"
+                            android:textColor="@color/red" />
+
+                        <Button
+                            android:id="@+id/btn_save"
+                            style="@style/RedButtonSolidMedium"
+                            android:text="@string/btn_save"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

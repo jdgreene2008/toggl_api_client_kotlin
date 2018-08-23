@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="24dp"
+        android:paddingStart="15dp"
+        android:paddingTop="24dp">
+
+        <TextView
+            android:id="@+id/label_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Thu, 13 Jun" />
+
+        <TextView
+            android:id="@+id/title_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Thu, 13 Jun"
+            tools:textColor="@color/toggl_status_unsaved" />
+
+        <include
+            android:id="@+id/divider"
+            layout="@layout/divider_gray"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_date" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <View
+                android:id="@+id/status_bar"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/duration"
+                android:layout_alignTop="@+id/description"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                tools:background="@color/toggl_status_unsaved" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/ListItem.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textSize="@dimen/text_medium"
+                tools:text="EMV Test Project" />
+
+            <View
+                android:id="@+id/project_color"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignStart="@id/description"
+                android:layout_below="@id/description"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                tools:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/project_name"
+                style="@style/ListItem.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/project_color"
+                android:textColor="@color/button_gray_dark"
+                android:textSize="@dimen/text_small"
+                tools:text="PRJ-1234 Production Support:" />
+
+            <TextView
+                android:id="@id/duration"
+                style="@style/ListItem.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/description"
+                android:layout_below="@+id/project_color"
+                android:textColor="@color/toggl_status_unsaved"
+                android:textSize="@dimen/text_medium"
+                tools:text="5:55:23" />
+
+            <View
+                android:id="@+id/btn_show_options"
+                style="@style/GrayButtonSmall"
+                android:background="@drawable/toggl_ic_entryaction"
+                android:layout_alignBottom="@id/status_bar"
+                android:layout_width="@dimen/button_x_small_width"
+                android:layout_height="@dimen/button_x_small_height"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"
+                tools:text="Options" />
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
